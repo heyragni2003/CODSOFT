@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+    <style>
+        *{
+    margin:0;
+    padding: 0;
+    
+    box-sizing: border-box;
+}
+.body{
+    background: rgb(5, 23, 27);
+    margin-top: 5rem;
+    overflow: scroll;
+    height: 100%;
+}
+.header{
+    top:0;
+    left:0;
+    position: fixed;
+    width:100%;
+    padding:30px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+.name{
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-style:normal;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:azure;
+    margin-left: 3rem;
+}
+.name:hover{
+    color:rgb(23,200,200);
+}
+
+.navbar a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-style:normal;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:azure;
+    padding-right: 3rem;
+}
+.navbar a:hover{
+    color:rgb(23, 200, 200);
+}
+#home{
+    font-size: 1.5rem;
+    color: rgb(52, 246, 246);
+}
+img{
+    height:350px;
+    width:350px;
+    float:right;
+    margin-right: 13rem;
+    
+    border-radius: 15rem;
+    border:0.3rem solid aqua;
+    box-shadow: 0.2rem 0.2rem 1rem 0.2rem aqua;
+    position:static;
+    animation:anim 3s infinite;
+}
+img:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+@keyframes anim{
+    0%{
+        transform:rotateY(0);
+    }
+    100%{
+        transform:rotateY(180deg);
+    }
+}
+.container{
+    height:50vh;
+    width:30%;
+    margin-left:15%;
+    margin-top: 12%;
+    
+    
+}
+p{
+    font-size: 3rem;
+    color:antiquewhite;
+}
+h2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 4rem;
+    color: rgb(52, 246, 246);
+    margin-bottom: 1.3rem;
+}
+span{
+    color: rgb(5, 23, 27);
+    position:relative;
+    -webkit-text-stroke: 0.3vw blue ;
+    text-transform: uppercase;
+}
+span::before{
+    content:attr(data-text);
+    position:absolute;
+    top:0;
+    left:0;
+    width:0;
+    height:100%;
+    color:rgb(52, 246, 55);
+    -webkit-text-stroke: 0vw blue ;
+    border-right:2px solid rgb(52, 246, 55);
+    overflow:hidden;
+    animation:animate 6s linear infinite;
+
+}
+@keyframes animate{
+    0%,10%,100%{
+        width:0;
+    }
+    70%,90%{
+        width:100%;
+    }
+}
+
+
+</style>
+</head>
+<body class="body">
+    <div class="header">
+        <a href="#" class="name">Portfolio</a>
+        <nav class="navbar">
+            <a href="#" id="home">Home</a>
+            <a href="#">About </a>
+            <a href="#">Services</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Contact</a>
+        </nav>
+    </div>
+   
+    <div>
+        <img src="../images/WhatsApp_Image_2023-11-01_at_7.15.25_PM-removebg-preview (5).png" alt="image">
+    </div>
+
+    <div class="container">
+            <p>Hello, I am </p>
+            <h2>Ragni singh</h2>
+            <p >Web <span data-text=" Developer..."> Developer...</span></p>
+    </div>
+
+ 
+        
+</body>
+</html>
